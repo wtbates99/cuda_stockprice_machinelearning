@@ -1,5 +1,5 @@
-import pandas as pd
 import numpy as np
+
 
 # Price-Based Metrics
 def calculate_daily_returns(df):
@@ -82,7 +82,6 @@ def calculate_ichimoku_cloud(df):
 
 # Dividends and Splits Indicators
 def calculate_dividend_split_indicators(df, windows=[7, 30, 90]):
-    print(df.columns)
     for window in windows:
         df[f"Dividend_{window}d"] = (
             df["Dividends"]
